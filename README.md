@@ -28,7 +28,7 @@ git clone https://github.com/benhartz/pimged-example.git
 
 **-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
 
-The data folder is ~12 GB of data, as it consist of  uncompressed tiff files directly from the 
+The data folder is ~6 GB of data, as it consist of  uncompressed tiff files directly from the 
 high-speed camera sensor used.
 
 **-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
