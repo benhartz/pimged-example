@@ -178,7 +178,7 @@ if __name__ == '__main__':
     # Plotting jet concentration during shot
     fig, axs = plt.subplots(nrows=2,
                             ncols=1,
-                            figsize=(16,5),
+                            figsize=(16, 5),
                             constrained_layout=True)
 
     # clear subplots
