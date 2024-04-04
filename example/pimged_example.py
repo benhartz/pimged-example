@@ -9,7 +9,7 @@ matplotlib.use('TkAgg', force=True)
 
 if __name__ == '__main__':
     # Setting file extension names
-    extranameprefix = os.path.join('data','data')
+    extranameprefix = os.path.join('data', 'data')
     testname = "part009_"
     pressname = "pressure"
 
@@ -37,7 +37,6 @@ if __name__ == '__main__':
                          imagefoldername=dirimage,
                          pressurefoldername=dirpress,
                          calcprecision=np.float32)
-
 
     # CALCULATE MODULE
     # Creating a calculation object
@@ -190,6 +189,7 @@ if __name__ == '__main__':
     gridspec = axs[0].get_subplotspec().get_gridspec()
     subfigs = [fig.add_subfigure(gs) for gs in gridspec]
 
+    im = []
     for row, subfig in enumerate(subfigs):
         if row == 0:
             data = tmpconc
@@ -224,7 +224,7 @@ if __name__ == '__main__':
     # Plotting statistics of jet
     fig, axs = plt.subplots(nrows=3,
                             ncols=1,
-                            figsize=(16,9),
+                            figsize=(16, 9),
                             constrained_layout=True)
 
     # clear subplots
