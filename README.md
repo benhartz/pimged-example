@@ -58,15 +58,38 @@ pimged-example/
 ```
 
 Now it should be possible to run the `pimged_example.py` script for testing simple data 
-manangement and get these plots out
+manangement and get these plots out. AVO translate to "After Valve Opening" and there is a delay 
+due to the air has to travel through the jet, valve opening delay and delay in the relays 
+sending the opening signal. 
 ![jet conc](https://i.ibb.co/dGX7NMC/jetconc.png)
 ![jet staistics](https://i.ibb.co/sQFtL2D/jetstatistics.png)
 ![Pressures](https://i.ibb.co/zQ2xTgh/pressure.png)
 
 The `pimged_big_data_example.py` script show how to use the code for handling larger amounts of 
-data to get concentrations fields
+data to get concentrations fields. 
 
-To use the POD calculation module, run `pimged_pod_example.py` for an example on use
+**-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
+
+Running `pimged_big_data_example.py` stores ~8.7 GB of data on the hard drive
+
+**-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
+
+The big data example should produce this plot
+![Big data example](https://i.ibb.co/Ss9tr1D/bigdata.png)
+
+
+
+To use the POD calculation module, run `pimged_pod_example.py` for an example on use. This 
+example script takes some time to run, as it is an extensive algorithm. 
+
+**-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
+
+Running `pimged_pod_example.py` stores ~5.5 GB of data on the hard drive
+
+**-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
+
+The following plot should be produced
+![POD mode](https://i.ibb.co/qDVCn6X/phase-POD-mode-1.png)
 
 ## Support
 The code is maintained during the GASMIX project from 2022 till start of 2025 by Benjamin Hartz
