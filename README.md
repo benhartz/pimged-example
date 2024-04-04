@@ -9,8 +9,9 @@ through the Joblib package, are used to speed-up computations and memory handlin
 
 ## [code pages are found here](https://benhartz.github.io/pimged-pages/)
 
-## Before use
-Intall the test code by using the following method
+## Installation
+A test package is created for the project, and it is possible to install it, with dependencies 
+from testPyPi using the following command in the terminal for a Windows machine:
 ```
 python -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple PImGed
 ```
@@ -66,3 +67,21 @@ The `pimged_big_data_example.py` script show how to use the code for handling la
 data to get concentrations fields
 
 To use the POD calculation module, run `pimged_pod_example.py` for an example on use
+
+## Support
+The code is maintained during the GASMIX project from 2022 till start of 2025 by Benjamin Hartz
+
+After project end there are no plans for further support of the code from main authors. 
+
+
+## Authors and acknowledgment
+Created by Benjamin Hartz
+
+Created during the GASMIX PhD project at DTU Construct under FVM, supported by EUPD and MAN ES 
+
+## License
+[BSD 3-Clause License](LICENSE)
+
+Copyright (c) 2024, Benjamin Arnold Krekeler Hartz
+
+---
