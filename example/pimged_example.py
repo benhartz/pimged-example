@@ -171,7 +171,10 @@ if __name__ == '__main__':
 
     plt.legend(handles=[valveleg[0], pressureleg[0]],
                loc='lower right')
-    plt.savefig(os.path.join(os.getcwd(), 'images', 'pressure.png'), bbox_inches='tight')
+
+    print('Saving example image in image folder: pressure-example.png')
+    plt.savefig(os.path.join(os.getcwd(), 'images', 'pressure-example.png'),
+                bbox_inches='tight')
 
     ##################################
     ##################################
@@ -217,7 +220,9 @@ if __name__ == '__main__':
         cbar0 = fig.colorbar(im, aspect=10, ax=axs.ravel().tolist(), shrink=0.8)
         cbar0.ax.set_ylabel('Visible Concentration [-]', rotation=270, verticalalignment='baseline')
 
-    plt.savefig(os.path.join(os.getcwd(), 'images', 'jetconc.png'), bbox_inches='tight')
+    print('Saving example image in image folder: jetconc-example.png')
+    plt.savefig(os.path.join(os.getcwd(), 'images', 'jetconc-example.png'),
+                bbox_inches='tight')
 
     ##################################
     ##################################
@@ -273,4 +278,6 @@ if __name__ == '__main__':
         cbar0 = fig.colorbar(im, aspect=10, ax=axs.ravel().tolist(), shrink=0.8)
         cbar0.ax.set_ylabel(colbartitle, rotation=270, verticalalignment='baseline')
 
-    plt.savefig(os.path.join(os.getcwd(), 'images', 'jetstatistics.png'), bbox_inches='tight')
+    print('Saving example image in image folder: jetstatistics-example.png')
+    plt.savefig(os.path.join(os.getcwd(), 'images', 'jetstatistics-example.png'),
+                bbox_inches='tight')

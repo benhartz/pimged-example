@@ -223,4 +223,6 @@ if __name__ == '__main__':
         cbar0 = fig.colorbar(im, aspect=10, ax=axs.ravel().tolist(), shrink=0.8)
         cbar0.ax.set_ylabel('Visible Concentration [-]', rotation=270, verticalalignment='baseline')
 
-    plt.savefig(os.path.join(os.getcwd(), 'images', 'bigdata.png'), bbox_inches='tight')
+    print('Saving example image in image folder: bigdata-example.png')
+    plt.savefig(os.path.join(os.getcwd(), 'images', 'bigdata-example.png'),
+                bbox_inches='tight')
