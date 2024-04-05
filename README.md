@@ -24,10 +24,10 @@ Get the example scripts from the [GitHub repository](https://github.com/benhartz
 git clone https://github.com/benhartz/pimged-example.git
 ``` 
 
+---
+### Download the example data from this [figshare link](https://figshare.com/s/286bc4cf871abd25b1d1)
 
-### [Download the example data from this figshare link](https://figshare.com/s/286bc4cf871abd25b1d1)
-
-
+---
 **-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
 
 The data folder is ~6 GB of data, as it consist of  uncompressed tiff files directly from the 
@@ -96,6 +96,33 @@ Running `pimged_pod_example.py` stores ~5.5 GB of data on the hard drive
 
 The following plot should be produced
 ![POD mode](https://i.ibb.co/qDVCn6X/phase-POD-mode-1.png)
+
+---
+
+## Code structure
+![codestructure](https://i.ibb.co/VDNfd9X/code-structure.png)
+
+
+To handle larger data amounts the code takes inspiration from Panda on datastructure and 
+implement a dataset module used for loading/saving data. The data is handled by datacontainers 
+with functions for manipulating the individual datatypes. With the datacontainer module implementing
+versatile classes for image and pressure datahandling, with common internal functions, it is 
+possible to reduce code repetition and adding datacontainers to the module. The metadata from 
+data is handled and stored for the individual dataset in the same datacontainer for and sent around 
+with the data. The dataset module object is then used as an input for other modules that can use 
+the standardrised data setup.
+ 
+Handling standard calculations a calculation module takes the dataset object as an input. 
+When new information is calculated it can then populate the dataset object with information, 
+utilizing the indirection implementation of list and numpy arrays in python. This streamline the 
+collection of data in one object that can load or save the data with minimal coding.
+
+Between the whole framework, several functions are reused with simple coding and these are 
+included in a utility package with the framework. Here is sorting of list elements widely used 
+in folder and filenames, checking folder paths, handling metadata etc. 
+
+Splitting the code framework into specialized modules decouple functionality and makes it 
+easy to update individual functionality in different modules, without breaking code coherence.
 
 ---
 
