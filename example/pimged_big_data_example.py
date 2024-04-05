@@ -4,14 +4,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pimged as pg
 
-import matplotlib
-matplotlib.use('TkAgg', force=True)
-
-plt.rc('text', usetex=False)
-plt.rc('font', family='serif', size=16)
-plt.rc('xtick', labelsize=16)
-plt.rc('ytick', labelsize=16)
-
 if __name__ == '__main__':
     # Setting file extension names
     extranameprefix = os.path.join('data', 'data')
@@ -209,7 +201,7 @@ if __name__ == '__main__':
         # create subplots per subfig
         axs = subfig.subplots(nrows=1, ncols=5)
         for col, ax in enumerate(axs):
-            im = ax.imshow(data[:, :, nimgconc[col]-100, row], vmin=0, vmax=1, cmap='grey')
+            im = ax.imshow(data[:, :, nimgconc[col]-100, row], vmin=0, vmax=1, cmap='Greys_r')
             ax.set_xlabel('x [pix]')
             if col != 0:
                 ax.set_yticks([])

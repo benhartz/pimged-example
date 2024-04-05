@@ -4,9 +4,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pimged as pg
 
-import matplotlib
-matplotlib.use('TkAgg', force=True)
-
 if __name__ == '__main__':
     # Setting file extension names
     extranameprefix = os.path.join('data', 'data')
@@ -206,7 +203,7 @@ if __name__ == '__main__':
         # create subplots per subfig
         axs = subfig.subplots(nrows=1, ncols=5)
         for col, ax in enumerate(axs):
-            im = ax.imshow(data[:, :, col, 0], cmap='grey')
+            im = ax.imshow(data[:, :, col, 0], cmap='Greys_r')
             ax.set_xlabel('x [pix]')
             if col != 0:
                 ax.set_yticks([])
@@ -264,7 +261,7 @@ if __name__ == '__main__':
         # create subplots per subfig
         axs = subfig.subplots(nrows=1, ncols=5)
         for col, ax in enumerate(axs):
-            im = ax.imshow(data[:, :, col], cmap='grey', vmin=0, vmax=vmaxset)
+            im = ax.imshow(data[:, :, col], cmap='Greys_r', vmin=0, vmax=vmaxset)
             ax.set_xlabel('x [pix]')
             if col != 0:
                 ax.set_yticks([])

@@ -4,14 +4,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pimged as pg
 
-import matplotlib
-matplotlib.use('TkAgg', force=True)
-
-plt.rc('text', usetex=False)
-plt.rc('font', family='serif', size=16)
-plt.rc('xtick', labelsize=16)
-plt.rc('ytick', labelsize=16)
-
 if __name__ == '__main__':
     # Setting file extension names
     extranameprefix = os.path.join('data', 'data')
@@ -110,7 +102,7 @@ if __name__ == '__main__':
 
     # Plot pressures
     fig, ax = plt.subplots(figsize=(13, 6))
-    imsh = ax.imshow(modeL[:, :, 130, mode_to_plot - 1], vmin=-1.0e-3, vmax=1.0e-3)
+    imsh = ax.imshow(modeL[:, :, 130, mode_to_plot - 1], vmin=-1.0e-3, vmax=1.0e-3, cmap='Greys_r')
     ax.set_xlabel(r'x [pix]')
     ax.set_ylabel(r'y [pix]')
 
