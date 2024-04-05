@@ -137,7 +137,7 @@ if __name__ == '__main__':
     datacalc.var()
 
     # Calculating the 4th moment of the data
-    image4thmoment = datacalc.moment(nth=4, timeidx=[0, 9])
+    datacalc.moment(nth=4, timeidx=[0, 9])
 
     ################################################################################################
     # HANDLE PRESSURES
@@ -253,7 +253,7 @@ if __name__ == '__main__':
             colbartitle = 'STD'
         elif row == 2:
             subfig.suptitle('4th moment')
-            data = image4thmoment
+            data = dataset.images.moment.data
             vmaxset = 0.008
             colbartitle = '4th moment'
         else:
