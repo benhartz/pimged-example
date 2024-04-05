@@ -119,6 +119,6 @@ if __name__ == '__main__':
     cbar = plt.colorbar(imsh, cax=cbar_ax, pad=0.1)
     cbar.ax.set_ylabel('POD response', rotation=270, verticalalignment='baseline')
 
-    print('Saving example image in image folder: phasePOD_mode_1.png')
-    plt.savefig(os.path.join(os.getcwd(), 'images', 'phasePOD_mode_1.png'),
+    print('Saving example image in image folder: phasePOD_mode_1-example.png')
+    plt.savefig(os.path.join(os.getcwd(), 'images', 'phasePOD_mode_1-example.png'),
                 bbox_inches='tight')
