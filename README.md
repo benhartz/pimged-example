@@ -25,22 +25,23 @@ git clone https://github.com/benhartz/pimged-example.git
 ``` 
 
 ---
-### Download the example data from this [figshare link](https://figshare.com/s/286bc4cf871abd25b1d1)
+## Download the example data from this [figshare link](https://figshare.com/s/286bc4cf871abd25b1d1)
 
----
-**-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
+
+**-- OBS -- -- OBS --  -- OBS --** 
 
 The data folder is ~6 GB of data, as it consist of  uncompressed tiff files directly from the 
 high-speed camera sensor used.
 
-**-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
 
+---
 ### Folder setup
 In the example folder is located an example script on using the PImGED package and its modules. 
 The data folder contain 10 datasets obtained in the GASMIX test setup along with 10 pressure 
 measurments in a ziped folder for speed-up of downloading instead of many small image files.
 
-Unzip the data folder so the folder path looks as seen here
+Unzip the data folder so the folder path looks as seen here, and the `working directory`
+should be set inside the example folder, with the scripts.
 
 ```
 pimged-example/
@@ -58,7 +59,6 @@ pimged-example/
      Pictures/
       ...
 ```
-The working directory should be set inside the example folder, with the scripts.
 
 ### Example results
 #### pimged_example.py
@@ -66,36 +66,26 @@ Now it should be possible to run the `pimged_example.py` script for testing simp
 manangement and get these plots out. AVO translate to "After Valve Opening" and there is a delay 
 due to the air has to travel through the jet, valve opening delay and delay in the relays 
 sending the opening signal. 
-![jet conc](https://i.ibb.co/dGX7NMC/jetconc.png)
-![jet staistics](https://i.ibb.co/sQFtL2D/jetstatistics.png)
+![jet conc](https://i.ibb.co/DLsWmqR/jetconc.png)
+![jet staistics](https://i.ibb.co/34msz0d/jetstatistics.png)
 ![Pressures](https://i.ibb.co/zQ2xTgh/pressure.png)
 
 #### pimged_big_data_example.py
 The `pimged_big_data_example.py` script show how to use the code for handling larger amounts of 
-data to get concentrations fields. 
-
-**-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
-
-Running `pimged_big_data_example.py` stores ~8.7 GB of data on the hard drive
-
-**-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
+data to get concentrations fields.  Running `pimged_big_data_example.py` stores ~8.7 GB of data 
+on the hard drive
 
 The big data example should produce this plot
-![Big data example](https://i.ibb.co/Ss9tr1D/bigdata.png)
+![Big data example](https://i.ibb.co/mB6c003/bigdata.png)
 
 
 #### pimged_pod_example.py
 To use the POD calculation module, run `pimged_pod_example.py` for an example on use. This 
-example script takes some time to run, as it is an extensive algorithm. 
-
-**-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
-
-Running `pimged_pod_example.py` stores ~5.5 GB of data on the hard drive
-
-**-- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS -- -- OBS --  -- OBS --** 
+example script takes some time to run, as it is an extensive algorithm. Running 
+`pimged_pod_example.py` stores ~5.5 GB of data on the hard drive
 
 The following plot should be produced
-![POD mode](https://i.ibb.co/qDVCn6X/phase-POD-mode-1.png)
+![POD mode](https://i.ibb.co/YDfFQPJ/phase-POD-mode-1.png)
 
 ---
 
