@@ -7,7 +7,11 @@ The framework is designed to handle large amounts of image data with limited com
 resources. Several optimized function utilizing OpenCV C++, numba compilation and multithreading 
 through the Joblib package, are used to speed-up computations and memory handling.
 
-## [code pages are found here](https://benhartz.github.io/pimged-pages/)
+GASMIX experiments consist of inverse seeded jet flows, where the environment is seeded and use 
+a jet of clean air for negative image. From the negative image a concentration is estimated 
+½based on initial images before seeding and fully seeded.
+
+## For more explicit information about the code, see the code pages [found here](https://benhartz.github.io/pimged-pages/)
 
 ## Installation
 A test package is created for the project, and it is possible to install it, with dependencies 
