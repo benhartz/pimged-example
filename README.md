@@ -9,9 +9,13 @@ through the Joblib package, are used to speed-up computations and memory handlin
 
 GASMIX experiments consist of inverse seeded jet flows, where the environment is seeded and use 
 a jet of clean air for negative image. From the negative image a concentration is estimated 
-½based on initial images before seeding and fully seeded.
+based on initial images before seeding and fully seeded.
 
-## For more explicit information about the code, see the code pages [found here](https://benhartz.github.io/pimged-pages/)
+---
+
+> **For more information, see the code pages --> [found here](https://benhartz.github.io/pimged-pages/) <--**
+
+---
 
 ## Installation
 A test package is created for the project, and it is possible to install it, with dependencies 
@@ -19,24 +23,19 @@ from testPyPi using the following command in the terminal for a Windows machine:
 ```
 python -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple PImGed
 ```
-
+---
 ## Example scripts and data
 
-### Get example scripts
 Get the example scripts from the [GitHub repository](https://github.com/benhartz/pimged-example), it is cloned by using the following command
 ```commandline
 git clone https://github.com/benhartz/pimged-example.git
 ``` 
 
----
-## Download the example data from this [figshare link](https://figshare.com/s/286bc4cf871abd25b1d1)
-
-
-**-- OBS -- -- OBS --  -- OBS --** 
-
-The data folder is ~6 GB of data, as it consist of  uncompressed tiff files directly from the 
-high-speed camera sensor used.
-
+### Download the example data from this --> [figshare link](https://figshare.com/s/286bc4cf871abd25b1d1) <--
+> **-- OBS -- -- OBS -- -- OBS --**
+> 
+> The data folder is ~6 GB of data, as it consist of uncompressed tiff files directly from the 
+> high-speed camera sensor used.
 
 ---
 ### Folder setup
@@ -49,47 +48,60 @@ should be set inside the example folder, with the scripts.
 
 ```
 pimged-example/
-  .gitignore
-  LICENSE
-  README.md
-  example/
-    pimged_example.py
-    pimged_big_data_example.py
-    pimged_pod_example.py
-  data/
-    data/
-     Pressure/
-      ...
-     Pictures/
-      ...
+|   .gitignore
+|   LICENSE
+|   README.md
+|
+|-- example/
+|       pimged_example.py
+|       pimged_big_data_example.py
+|       pimged_pod_example.py
+|
+`-- data/
+    `-- data/
+        `-- Pressure/
+        |     ...
+        `-- Pictures/
+              ...
 ```
+---
 
 ### Example results
+All examples are designed so they should be able to run on most computeres of todays standard 
+with 16 GB of RAM. If less RAM is installed in the computer, there could be issues with running the 
+examples
+
 #### pimged_example.py
-Now it should be possible to run the `pimged_example.py` script for testing simple data 
+
+>Now it should be possible to run the `pimged_example.py` script for testing simple data 
 manangement and get these plots out. AVO translate to "After Valve Opening" and there is a delay 
 due to the air has to travel through the jet, valve opening delay and delay in the relays 
-sending the opening signal. 
-![jet conc](https://i.ibb.co/DLsWmqR/jetconc.png)
-![jet staistics](https://i.ibb.co/34msz0d/jetstatistics.png)
-![Pressures](https://i.ibb.co/zQ2xTgh/pressure.png)
+sending the opening signal.
+> 
+><img src="https://i.ibb.co/DLsWmqR/jetconc.png" alt="drawing" width="800"/>
+><img src="https://i.ibb.co/34msz0d/jetstatistics.png" alt="drawing" width="800"/>
+><img src="https://i.ibb.co/zQ2xTgh/pressure.png" alt="drawing" width="500"/>
 
 #### pimged_big_data_example.py
-The `pimged_big_data_example.py` script show how to use the code for handling larger amounts of 
-data to get concentrations fields.  Running `pimged_big_data_example.py` stores ~8.7 GB of data 
-on the hard drive
+> The `pimged_big_data_example.py` script show how to use the code for handling larger amounts 
+> of data to get concentrations fields.  
+> 
+> **Running `pimged_big_data_example.py` stores ~8.7 GB of data on the hard drive**
+> 
+> The big data example should produce this plot
+> <img src="https://i.ibb.co/mB6c003/bigdata.png" alt="drawing" width="800"/>
 
-The big data example should produce this plot
-![Big data example](https://i.ibb.co/mB6c003/bigdata.png)
 
 
 #### pimged_pod_example.py
-To use the POD calculation module, run `pimged_pod_example.py` for an example on use. This 
-example script takes some time to run, as it is an extensive algorithm. Running 
-`pimged_pod_example.py` stores ~5.5 GB of data on the hard drive
+> To use the POD calculation module, run `pimged_pod_example.py` for an example on use. This 
+example script takes some time to run, as it is an extensive algorithm.
+> 
+> **Running `pimged_pod_example.py` stores ~5.5 GB of data on the hard drive**
+> 
+> The following plot should be produced
+> <img src="https://i.ibb.co/YDfFQPJ/phase-POD-mode-1.png" alt="drawing" width="500"/>
 
-The following plot should be produced
-![POD mode](https://i.ibb.co/YDfFQPJ/phase-POD-mode-1.png)
 
 ---
 
@@ -125,11 +137,14 @@ The code is maintained during the GASMIX project from 2022 till start of 2025 by
 
 After project end there are no plans for further support of the code from main authors. 
 
+---
 
 ## Authors and acknowledgment
 Created by Benjamin Hartz
 
 Created during the GASMIX PhD project at DTU Construct under FVM, supported by EUPD and MAN ES 
+
+---
 
 ## License
 [BSD 3-Clause License](LICENSE)
