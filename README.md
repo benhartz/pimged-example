@@ -144,6 +144,10 @@ The package design makes it possible to implement new modules and functionalitie
 module only consist of a Phase POD rutine, but implementing a static POD or SPOD method could 
 improve useability. 
 
+## Peer review
+There have been no feedback that is implemented in the code. All ideas in improvements is based on 
+learnings over coding the framework and learning to handle large datasets. 
+
 ---
 ## Support
 The code is maintained during the GASMIX project from 2022 till start of 2025 by Benjamin Hartz
