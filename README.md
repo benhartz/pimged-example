@@ -9,7 +9,8 @@ through the Joblib package, are used to speed-up computations and memory handlin
 
 GASMIX experiments consist of inverse seeded jet flows, where the environment is seeded and use 
 a jet of clean air for negative image. From the negative image a concentration is estimated 
-based on initial images before seeding and fully seeded.
+based on initial images before seeding and fully seeded. The PimGED package was designed to 
+handle these images on local computers with data on physical external harddrives.
 
 ---
 
@@ -24,7 +25,7 @@ from testPyPi using the following command in the terminal for a Windows machine:
 python -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple PImGed
 ```
 ---
-## Example scripts and data
+## Example tutorial scripts and data
 
 Get the example scripts from the [GitHub repository](https://github.com/benhartz/pimged-example), it is cloned by using the following command
 ```commandline
@@ -38,7 +39,7 @@ git clone https://github.com/benhartz/pimged-example.git
 > high-speed camera sensor used.
 
 ---
-### Folder setup
+### Extracted folder setup
 In the example folder is located an example script on using the PImGED package and its modules. 
 The data folder contain 10 datasets obtained in the GASMIX test setup along with 10 pressure 
 measurments in a ziped folder for speed-up of downloading instead of many small image files.
@@ -89,6 +90,7 @@ sending the opening signal.
 > **Running `pimged_big_data_example.py` stores ~8.7 GB of data on the hard drive**
 > 
 > The big data example should produce this plot
+> 
 > <img src="https://i.ibb.co/mB6c003/bigdata.png" alt="drawing" width="800"/>
 
 
@@ -100,6 +102,7 @@ example script takes some time to run, as it is an extensive algorithm.
 > **Running `pimged_pod_example.py` stores ~5.5 GB of data on the hard drive**
 > 
 > The following plot should be produced
+> 
 > <img src="https://i.ibb.co/YDfFQPJ/phase-POD-mode-1.png" alt="drawing" width="500"/>
 
 
@@ -131,7 +134,17 @@ Splitting the code framework into specialized modules decouple functionality and
 easy to update individual functionality in different modules, without breaking code coherence.
 
 ---
+## Improvements
+A re-write of the calculation module could improve useability with a design similar to that of 
+the POD module. The re-design would provide more flexibility and robustness of the code. And the 
+"jetparameters" module could be updated for the new code structure and made funcitioning again.
 
+## Future work
+The package design makes it possible to implement new modules and functionalities fast. The POD 
+module only consist of a Phase POD rutine, but implementing a static POD or SPOD method could 
+improve useability. 
+
+---
 ## Support
 The code is maintained during the GASMIX project from 2022 till start of 2025 by Benjamin Hartz
 
