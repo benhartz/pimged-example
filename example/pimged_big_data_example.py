@@ -49,11 +49,14 @@ if __name__ == '__main__':
     # in the RAM at all times during calculations. It saves data dependent on settings and makes
     # it possible to load chucked parts in manually of concentration fields. The script is
     # created so most modern computers with at least 16GB RAM should be able to run the calculations
+    #
+    # All images created will be saved in the images folder when the scripts are done. If the
+    # scripts are runned with python console enabled, the plots will be visible after execution
 
     # -------- OBS -------- -------- OBS -------- -------- OBS -------- -------- OBS --------
     # -------- OBS -------- -------- OBS -------- -------- OBS -------- -------- OBS --------
     #
-    #               ~18 GB of data is stored on the hard drive using this script
+    #               ~8.7 GB of data is stored on the hard drive using this script
     #
     # -------- OBS -------- -------- OBS -------- -------- OBS -------- -------- OBS --------
     # -------- OBS -------- -------- OBS -------- -------- OBS -------- -------- OBS --------
@@ -218,3 +221,4 @@ if __name__ == '__main__':
     print('Saving example image in image folder: bigdata-example.png')
     plt.savefig(os.path.join(os.getcwd(), 'images', 'bigdata-example.png'),
                 bbox_inches='tight')
+    plt.show()

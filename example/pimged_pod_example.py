@@ -74,6 +74,17 @@ if __name__ == '__main__':
     # The algorithm do not return or store any data during calculations, as it is a RAM heavy
     # operation. Therefore, everything is saved and has to be loaded in after calculations are
     # complete
+    #
+    # All images created will be saved in the images folder when the scripts are done. If the
+    # scripts are runned with python console enabled, the plots will be visible after execution
+
+    # -------- OBS -------- -------- OBS -------- -------- OBS -------- -------- OBS --------
+    # -------- OBS -------- -------- OBS -------- -------- OBS -------- -------- OBS --------
+    #
+    #               ~5.5 GB of data is stored on the hard drive using this script
+    #
+    # -------- OBS -------- -------- OBS -------- -------- OBS -------- -------- OBS --------
+    # -------- OBS -------- -------- OBS -------- -------- OBS -------- -------- OBS --------
 
     ################################################################################################
     ################################################################################################
@@ -114,3 +125,4 @@ if __name__ == '__main__':
     print('Saving example image in image folder: phasePOD_mode_1-example.png')
     plt.savefig(os.path.join(os.getcwd(), 'images', 'phasePOD_mode_1-example.png'),
                 bbox_inches='tight')
+    plt.show()

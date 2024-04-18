@@ -39,6 +39,9 @@ if __name__ == '__main__':
     # Creating a calculation object
     datacalc = pg.Calculate(dataset)
 
+    # All images created will be saved in the images folder when the scripts are done. If the
+    # scripts are runned with python console enabled, the plots will be visible after execution
+
     ################################################################################################
     ################################################################################################
     # ------------ CREATING CALIBRATION
@@ -71,7 +74,7 @@ if __name__ == '__main__':
     # Flip images for representation
     dataset.images.concentration.fliparraylr()
 
-    # Save uncorrected concentrations in new
+    # Save uncorrected concentrations in new temporary variable
     tmpconc = dataset.images.concentration.data
 
     ################################################################################################
@@ -152,7 +155,7 @@ if __name__ == '__main__':
     plt.figure(figsize=(9, 4))
     for i in range(0, 10):
         plt.plot(dataset.pressures.time[0::20, i]*1000,
-                 dataset.pressures.pressure1.pressure[0::20,i], color=(0.5,0.5,0.5), alpha=0.5)
+                 dataset.pressures.pressure1.pressure[0::20, i], color=(0.5, 0.5, 0.5), alpha=0.5)
 
     valveleg = plt.plot(dataset.pressures.time[:, 0]*1000,
                         dataset.pressures.valve[:, 0]*1000+30100,
@@ -278,3 +281,4 @@ if __name__ == '__main__':
     print('Saving example image in image folder: jetstatistics-example.png')
     plt.savefig(os.path.join(os.getcwd(), 'images', 'jetstatistics-example.png'),
                 bbox_inches='tight')
+    plt.show()
