@@ -1,11 +1,18 @@
 import os
+import shutil
 
 import matplotlib.pyplot as plt
 import numpy as np
+
 import pimged as pg
 
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!! Remember to have the working directory inside the example folder !!!!
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 if __name__ == '__main__':
-    # Setting file extension names
+    # Setting file extension names - if the folder structure is not as decribed in the readme.md,
+    # the path to the data folder has to reflect the change (extranameprefix)
     extranameprefix = os.path.join('data', 'data')
     testname = "part009_"
     pressname = "pressure"
@@ -24,6 +31,10 @@ if __name__ == '__main__':
 
     # Setting a savefolder for POD results
     savefolder = os.path.join(os.getcwd(), "big data")
+
+    # If the concentration folder exist, clearing it of data for running the example again
+    if os.path.isdir(os.path.join(os.getcwd(), 'big data', 'Concentration')):
+        shutil.rmtree(os.path.join(os.getcwd(), 'big data', 'Concentration'))
 
     ################################################################################################
     ################################################################################################

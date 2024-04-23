@@ -4,8 +4,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pimged as pg
 
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!! Remember to have the working directory inside the example folder !!!!
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 if __name__ == '__main__':
-    # Setting file extension names
+    # Setting file extension names - if the folder structure is not as decribed in the readme.md,
+    # the path to the data folder has to reflect the change (extranameprefix)
     extranameprefix = os.path.join('data', 'data')
     testname = "part009_"
     pressname = "pressure"
@@ -81,7 +86,7 @@ if __name__ == '__main__':
     ################################################################################################
     # ------------ BLACKPOINT CORRECTION
     # Set images to use in blackpoint correction calculations
-    nimgblack = [i for i in range(0, nimgcal)]
+    nimgblack = [i for i in range(1, nimgcal+1)]
     nimgblack.append(400)
 
     # Load images for calculation of calibration
