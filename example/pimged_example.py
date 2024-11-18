@@ -89,7 +89,7 @@ if __name__ == '__main__':
     nimgblack = [i for i in range(1, nimgcal+1)]
     nimgblack.append(400)
 
-    # Load images for calculation of calibration
+    # Load images for calculation of correted calibration
     dataset.loadimages(setfolderstoload=loaddataset, setimagestoload=nimgblack, verb=True,
                        loadmethodimage='spec')
 
@@ -100,13 +100,16 @@ if __name__ == '__main__':
     jetcenter = 259
     jetwidth = 42
     wallidx = 26
+    glareremoveidx = 100
 
     # Calculation of blackpoint correction matrices
     datacalc.rawblackcorr(jetcenter=jetcenter,
                           jetwidth=jetwidth,
                           wallidx=wallidx,
                           shotidx=shotidx,
-                          nimages=nimgcal)
+                          removeedgew_zero=glareremoveidx,
+                          nimages=nimgcal,
+                          forcerecal=True)
 
     # Create new calibration matrices
     datacalc.bit2conccalib(numberofimages=nimgcal)
@@ -120,6 +123,7 @@ if __name__ == '__main__':
                           jetwidth=jetwidth,
                           wallidx=wallidx,
                           shotidx=shotidx,
+                          removeedgew_zero=glareremoveidx,
                           nimages=nimgcal,
                           forcerecal=False)
 
