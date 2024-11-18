@@ -119,7 +119,7 @@ if __name__ == '__main__':
     # How many pixels is removed from width edges of the image to reduce edge errors. -1
     # correspond to remove wallidx pixels as set in the
     # dataset.images.blackpointcorr.arrayinfo.jetinfo.wallidx setting
-    databig.setup.blackcorrection.removeedgew = -1
+    databig.setup.blackcorrection.removeedgew = 100
 
     # If the jet is going from left to right, it is non-flipped (False). If the jet is going from
     # right to left, it is flipped (True).
