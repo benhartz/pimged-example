@@ -26,12 +26,8 @@ python -m pip install --index-url https://test.pypi.org/simple/ --extra-index-ur
 ```
 ---
 ## Example tutorial scripts and data
-There are two ways to get the example scripts. Clone this repo or get the example scripts from 
-the [GitHub repository](https://github.com/benhartz/pimged-example), it is cloned by using the following command
-```commandline
-git clone https://github.com/benhartz/pimged-example.git
-```
-Though external data is needed to use the examples
+There are two ways to get the example scripts. Clone this repo and set the working directory 
+inside the example folder. Further, external data is needed to use the examples
 ### Download the example data from this --> [figshare link](https://figshare.com/s/286bc4cf871abd25b1d1) <--
 > **-- OBS -- -- OBS -- -- OBS --**
 > 
